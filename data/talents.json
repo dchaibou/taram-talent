@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "slug": "hama-kane",
+    "nom": "Hama Kane",
+    "domaine": "Entrepreneuriat Tech",
+    "photoUrl": "/images/hama.jpg",
+    "phraseAccroche": "Le Nigérien qui a transformé un échec en une application nationale.",
+    "parcours": [
+      {
+        "annee": 2018,
+        "titre": "Échec du premier projet",
+        "description": "Lancement d'une plateforme e-commerce qui a échoué. Leçon : la logistique est clé."
+      },
+      {
+        "annee": 2020,
+        "titre": "Lancement de NiyaTech",
+        "description": "Pivot et création d'une application de micro-finance réussie."
+      }
+    ],
+    "accomplissements": [
+      "Fondateur de 'NiyaTech'",
+      "Prix de l'Innovation 2023"
+    ],
+    "combats": [
+      "Difficulté à trouver des financements locaux",
+      "Stabilité internet"
+    ],
+    "lecons": "Un grand échec est souvent juste un feedback coûteux."
+  },
+  {
+    "id": 2,
+    "slug": "aisha-moussa",
+    "nom": "Aisha Moussa",
+    "domaine": "Art et Culture",
+    "photoUrl": "/images/aisha.jpg",
+    "phraseAccroche": "De l'ombre à la lumière : une voix qui célèbre la culture sahélienne.",
+    "parcours": [
+      {
+        "annee": 2015,
+        "titre": "Débuts difficiles",
+        "description": "Rejet par les maisons de production locales pour un style 'trop moderne'."
+      }
+    ],
+    "accomplissements": [
+      "Album 'Sahara Groove' certifié Or",
+      "Représentation du Niger à l'UNESCO"
+    ],
+    "combats": ["Préjugés sur l'art moderne dans la société"],
+    "lecons": "L'authenticité est la plus grande des révolutions."
+  }
+]
