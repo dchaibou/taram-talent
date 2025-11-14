@@ -3,22 +3,22 @@
 import { Metadata } from "next";
 import { Talent, ParcoursEtape } from "@/types/Talent";
 import Image from "next/image";
-// Importez les fonctions asynchrones pour la gestion des données
 import { getTalentBySlug, getAllTalents } from "@/lib/data";
 
 // Type pour les paramètres de la route
-interface TalentPageProps {
-  params: {
-    slug: string;
-  };
-}
+// interface TalentPageProps {
+//   params: {
+//     slug: string;
+//   };
+// }
 
-// --- 1. Génération Statique des Métadonnées (SEO) ---
 export async function generateMetadata({
   params,
-}: TalentPageProps): Promise<Metadata> {
-  // Utilisation de la fonction asynchrone, doit être AWAIT
-  const talent = await getTalentBySlug(params.slug);
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const talent = await getTalentBySlug(slug);
 
   if (!talent) return { title: "Talent non trouvé" };
 
@@ -36,9 +36,13 @@ export async function generateStaticParams() {
 }
 
 // --- 3. Composant Principal (Server Component) ---
-export default async function TalentPage({ params }: TalentPageProps) {
-  // Récupération asynchrone du talent
-  const talent = await getTalentBySlug(params.slug);
+export default async function TalentPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { slug } = await params;
+  const talent = await getTalentBySlug(slug);
 
   if (!talent) {
     return <div className="p-20 text-center text-3xl">Talent non trouvé.</div>;
