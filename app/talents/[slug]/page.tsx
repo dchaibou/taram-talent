@@ -1,17 +1,14 @@
-// app/talents/[slug]/page.tsx (Optimisation Long-Form Content)
+// app/talents/[slug]/page.tsx (Optimisation Long-Form Content - SANS ICÔNES)
 
 import { Metadata } from "next";
 import { Talent, ParcoursEtape } from "@/types/Talent";
 import Image from "next/image";
 import { getTalentBySlug, getAllTalents } from "@/lib/data";
-import React from "react"; // Nécessaire pour React.Fragment/Key
+import React from "react";
 
 // --- FONCTION UTILITAIRE POUR GÉRER LES PARAGRAPHES ---
-// Transforme les chaînes de texte contenant des sauts de ligne (\n\n) en éléments <p>
 const renderParagraphs = (text: string) => {
-  // Divise le texte par deux sauts de ligne (standard pour un nouveau paragraphe)
   return text.split("\n\n").map((paragraph, index) => (
-    // Utilisez key pour React. C'est sécurisé car le contenu est pré-rendu (Server Component)
     <p
       key={index}
       className="mb-4 leading-relaxed text-gray-700 dark:text-gray-400"
@@ -21,12 +18,14 @@ const renderParagraphs = (text: string) => {
   ));
 };
 
+// ... (generateMetadata, generateStaticParams restent inchangés) ...
+
 export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug } = params;
   const talent = await getTalentBySlug(slug);
 
   if (!talent) return { title: "Talent non trouvé" };
@@ -47,7 +46,7 @@ export default async function TalentPage({
 }: {
   params: { slug: string };
 }) {
-  const { slug } = await params;
+  const { slug } = params;
   const talent = await getTalentBySlug(slug);
 
   if (!talent) {
@@ -86,7 +85,7 @@ export default async function TalentPage({
         {/* Colonne 1: Le Parcours & Les Combats */}
         <div className="lg:col-span-2 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl">
           <h2 className="text-4xl font-extrabold text-red-600 mb-8 border-b-4 border-red-200 pb-3">
-            ⚔️ Chronologie : Défis, Pivots et Moments Clés
+            Chronologie : Défis, Pivots et Moments Clés
           </h2>
 
           <ul className="space-y-10">
@@ -99,7 +98,6 @@ export default async function TalentPage({
                 <h3 className="text-2xl font-bold text-red-700 dark:text-red-400">
                   {etape.titre}
                 </h3>
-                {/* APPLICATION DE renderParagraphs pour la DESCRIPTION LONGUE */}
                 <div className="mt-1 text-lg">
                   {renderParagraphs(etape.description)}
                 </div>
@@ -108,36 +106,41 @@ export default async function TalentPage({
           </ul>
 
           <h3 className="text-3xl font-bold text-orange-600 mt-12 mb-4">
-            💡 Stratégie de Résilience : L&apos;Échec comme Levain
+            Stratégie de Résilience : L&apos;Échec comme Levain{" "}
           </h3>
           <div className="italic text-xl text-gray-700 dark:text-gray-300 p-6 bg-orange-50 dark:bg-orange-950 rounded-lg border-l-4 border-orange-500">
-            {/* APPLICATION DE renderParagraphs pour la LEÇON LONGUE */}
             {renderParagraphs(talent.lecons)}
           </div>
         </div>
 
-        {/* Colonne 2: Accomplissements et Stats (Inchangée) */}
+        {/* Colonne 2: Accomplissements et Défis (MAINTENANT AVEC DES PUCES CLASSIQUES) */}
         <aside className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl border-l-4 border-green-600">
           <h2 className="text-3xl font-extrabold text-blue-700 dark:text-blue-400 mb-6">
-            🏆 Accomplissements Majeurs
+            Accomplissements Majeurs
           </h2>
-          <ul className="list-none space-y-4 text-lg text-gray-700 dark:text-gray-300">
+          {/* Utilisation de list-disc pour des puces claires et professionnelles */}
+          <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 dark:text-gray-300 ml-4">
             {talent.accomplissements.map((succes, index) => (
-              <li key={index} className="flex items-start">
-                <span className="text-green-600 text-xl mr-3 mt-0.5">✅</span>
-                <span className="font-medium">{succes}</span>
+              <li
+                key={index}
+                className="font-medium text-blue-800 dark:text-blue-400"
+              >
+                {succes}
               </li>
             ))}
           </ul>
 
           <h3 className="text-3xl font-extrabold text-blue-700 dark:text-blue-400 mt-10 mb-6">
-            🛑 Défis Spécifiques
+            Défis Spécifiques
           </h3>
-          <ul className="list-none space-y-4 text-lg text-gray-700 dark:text-gray-300">
+          {/* Utilisation de list-disc pour les défis */}
+          <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 dark:text-gray-300 ml-4">
             {talent.combats.map((combat, index) => (
-              <li key={index} className="flex items-start">
-                <span className="text-orange-600 text-xl mr-3 mt-0.5">🚧</span>
-                <span className="font-medium">{combat}</span>
+              <li
+                key={index}
+                className="font-medium text-orange-600 dark:text-orange-400"
+              >
+                {combat}
               </li>
             ))}
           </ul>
