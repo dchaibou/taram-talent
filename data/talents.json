@@ -4,7 +4,7 @@
     "slug": "hama-kane",
     "nom": "Hama Kane",
     "domaine": "Entrepreneuriat Tech",
-    "photoUrl": "/images/hama-kane.jpg",
+    "photoUrl": "/images/logo.png",
     "phraseAccroche": "Le Nigérien qui a transformé l'échec d'un e-commerce en une application de micro-finance nationale, révolutionnant l'inclusion financière.",
     "parcours": [
       {
@@ -45,7 +45,7 @@
     "slug": "aisha-moussa",
     "nom": "Aisha Moussa",
     "domaine": "Art et Culture",
-    "photoUrl": "/images/aisha-moussa.jpg",
+    "photoUrl": "/images/logo.png",
     "phraseAccroche": "La voix qui a redéfini l'identité musicale sahélienne et captivé les scènes culturelles mondiales par son mélange de tradition et d'électro.",
     "parcours": [
       {
@@ -75,7 +75,7 @@
     "slug": "moussa-sani",
     "nom": "Moussa Sani",
     "domaine": "Agriculture & Agro-Tech",
-    "photoUrl": "/images/moussa-sani.jpg",
+    "photoUrl": "/images/logo.png",
     "phraseAccroche": "Un ingénieur agronome qui utilise l'IA pour optimiser les rendements du mil dans le Sahel, combattant la désertification par la donnée.",
     "parcours": [
       {
@@ -106,7 +106,7 @@
     "slug": "fatima-ali",
     "nom": "Fatima Ali",
     "domaine": "Éducation & EdTech",
-    "photoUrl": "/images/fatima-ali.jpg",
+    "photoUrl": "/images/logo.png",
     "phraseAccroche": "Une pédagogue passionnée qui a créé une plateforme d'apprentissage en langues locales, brisant les barrières de l'alphabétisation grâce à la gamification.",
     "parcours": [
       {
@@ -136,7 +136,7 @@
     "slug": "issa-amadou",
     "nom": "Issa Amadou",
     "domaine": "Énergie Renouvelable",
-    "photoUrl": "/images/issa-amadou.jpg",
+    "photoUrl": "/images/logo.png",
     "phraseAccroche": "Artisan de la transition énergétique, il développe des solutions solaires modulaires et abordables pour les foyers non connectés du Sahel.",
     "parcours": [
       {
@@ -166,7 +166,7 @@
     "slug": "mariatou-boureima",
     "nom": "Mariatou Boureima",
     "domaine": "Santé & Bien-être",
-    "photoUrl": "/images/mariatou-boureima.jpg",
+    "photoUrl": "/images/logo.png",
     "phraseAccroche": "Infirmière devenue entrepreneure sociale, elle a créé la première clinique mobile pour la santé maternelle et infantile dans la région de Maradi.",
     "parcours": [
       {
@@ -197,7 +197,7 @@
     "slug": "sara-abdou",
     "nom": "Sara Abdou",
     "domaine": "Journalisme d'Investigation",
-    "photoUrl": "/images/sara-abdou.jpg",
+    "photoUrl": "/images/logo.png",
     "phraseAccroche": "Journaliste intrépide utilisant les données pour dénoncer la corruption et promouvoir la transparence dans la gestion des ressources publiques.",
     "parcours": [
       {
@@ -227,7 +227,7 @@
     "slug": "omar-daouda",
     "nom": "Omar Daouda",
     "domaine": "Sport et Jeunesse",
-    "photoUrl": "/images/omar-daouda.jpg",
+    "photoUrl": "/images/logo.png",
     "phraseAccroche": "Ancien athlète olympique, il a fondé une académie qui utilise le football comme vecteur d'éducation et de développement social dans les quartiers défavorisés.",
     "parcours": [
       {
@@ -257,7 +257,7 @@
     "slug": "amina-boubacar",
     "nom": "Amina Boubacar",
     "domaine": "Environnement & Eau",
-    "photoUrl": "/images/amina-boubacar.jpg",
+    "photoUrl": "/images/logo.png",
     "phraseAccroche": "Hydrologue pionnière qui a développé des systèmes de micro-irrigation à faible coût, transformant des terres arides en oasis de résilience alimentaire.",
     "parcours": [
       {
@@ -293,7 +293,7 @@
     "slug": "ibrahim-guindo",
     "nom": "Ibrahim Guindo",
     "domaine": "Gouvernance & Réformes Publiques",
-    "photoUrl": "/images/ibrahim-guindo.jpg",
+    "photoUrl": "/images/logo.png",
     "phraseAccroche": "Ancien haut fonctionnaire, il a mené une réforme audacieuse de la fonction publique, utilisant la transparence et la technologie pour lutter contre la bureaucratie et l'inefficacité.",
     "parcours": [
       {

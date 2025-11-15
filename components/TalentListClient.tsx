@@ -98,22 +98,23 @@ const TalentListClient: React.FC<TalentListClientProps> = ({
         </div>
       )}
 
-      {/* --- Affichage des Cartes WOW (Grille) --- */}
+      {/* --- JE VEUX QUE LA PHOTO SOIT 400*300 ou 400*400 sur le card --- */}
       <div className={`grid ${gridClasses}`}>
         {processedTalents.map((talent) => (
           <Link href={`/talents/${talent.slug}`} key={talent.id} passHref>
             {/* Carte de Talent - Effet Waouh */}
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl overflow-hidden cursor-pointer h-full transition-all duration-500 transform hover:scale-[1.03] hover:shadow-green-500/50 hover:shadow-3xl border-t-4 border-orange-500">
-              {/* CORRECTION : L'image est maintenant rectangulaire, remplit le conteneur et est optimisée */}
-              <Image
-                src={talent.photoUrl}
-                alt={`Photo de ${talent.nom}`}
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover transition-opacity duration-500 hover:opacity-80"
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-              />
-              {/* FIN CORRECTION IMAGE */}
+              {/* Conteneur qui force le ratio 1:1 */}
+              <div className="relative aspect-square w-full">
+                <Image
+                  src={talent.photoUrl}
+                  alt={`Photo de ${talent.nom}`}
+                  width={300}
+                  className="object-cover transition-opacity duration-500 hover:opacity-80"
+                  // Tailles toujours nécessaires pour le srcset optimisé
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
+                />
+              </div>
 
               <div className="p-5">
                 <h2 className="text-2xl font-bold text-green-700 dark:text-green-400">

@@ -91,9 +91,9 @@ export default async function TalentPage({
           <ul className="space-y-10">
             {talent.parcours.map((etape: ParcoursEtape, index: number) => (
               <li key={index} className="relative pl-10">
-                <div className="absolute left-0 top-0 w-6 h-6 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-md">
+                {/* <div className="absolute left-0 top-0 w-6 h-6 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-md">
                   {etape.annee.toString().slice(-2)}
-                </div>
+                </div> */}
                 <div className="absolute left-3 top-0 bottom-0 w-0.5 bg-red-300"></div>
                 <h3 className="text-2xl font-bold text-red-700 dark:text-red-400">
                   {etape.titre}
