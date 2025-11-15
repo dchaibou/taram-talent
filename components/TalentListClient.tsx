@@ -98,7 +98,6 @@ const TalentListClient: React.FC<TalentListClientProps> = ({
         </div>
       )}
 
-      {/* --- JE VEUX QUE LA PHOTO SOIT 400*300 ou 400*400 sur le card --- */}
       <div className={`grid ${gridClasses}`}>
         {processedTalents.map((talent) => (
           <Link href={`/talents/${talent.slug}`} key={talent.id} passHref>
@@ -110,8 +109,8 @@ const TalentListClient: React.FC<TalentListClientProps> = ({
                   src={talent.photoUrl}
                   alt={`Photo de ${talent.nom}`}
                   width={300}
+                  height={300}
                   className="object-cover transition-opacity duration-500 hover:opacity-80"
-                  // Tailles toujours nécessaires pour le srcset optimisé
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
                 />
               </div>
