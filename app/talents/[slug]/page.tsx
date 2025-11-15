@@ -25,7 +25,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
   const talent = await getTalentBySlug(slug);
 
   if (!talent) return { title: "Talent non trouvé" };
@@ -46,7 +46,7 @@ export default async function TalentPage({
 }: {
   params: { slug: string };
 }) {
-  const { slug } = params;
+  const { slug } = await params;
   const talent = await getTalentBySlug(slug);
 
   if (!talent) {
