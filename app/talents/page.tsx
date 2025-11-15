@@ -1,16 +1,9 @@
 // app/talents/page.tsx
 import { Metadata } from "next";
-import talentsData from "@/data/talents.json"; // Utilisation de l'alias
-import { Talent } from "@/types/Talent";
 import TalentListClient from "@/components/TalentListClient";
+import { getAllTalents } from "@/lib/data";
 
-// --- Fonction de Data Fetching (Server-Side) ---
-// Simule la récupération des données (plus tard, ce sera un appel à votre CMS)
-const getTalents = async (): Promise<Talent[]> => {
-  // Ici, pas besoin de `getStaticProps` ! Le fetching se fait directement
-  // et le composant est rendu statiquement par défaut (SSG)
-  return talentsData as Talent[];
-};
+
 
 // --- Définition des Métadonnées (SEO) ---
 export const metadata: Metadata = {
@@ -21,7 +14,7 @@ export const metadata: Metadata = {
 
 // --- Composant Principal de la Page (Server Component) ---
 export default async function TalentsPage() {
-  const talents = await getTalents();
+  const talents = await getAllTalents();
 
   return (
     // On passe les données initialement chargées au composant client

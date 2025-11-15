@@ -1,11 +1,8 @@
 import { Metadata } from "next";
-import { Talent } from "@/types/Talent";
-import talentsData from "@/data/talents.json";
 import TalentListClient from "@/components/TalentListClient";
+import { getLatestTalents } from "@/lib/data";
 
-const getTalents = async (): Promise<Talent[]> => {
-  return talentsData as Talent[];
-};
+
 
 export const metadata: Metadata = {
   title: "Talents Nigériens | Parcours, Combats et Réussites",
@@ -14,12 +11,12 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const talents = await getTalents();
+  const talents = await getLatestTalents();
 
   return (
-    <div className="flex min-h-screen justify-center bg-zinc-50 dark:bg-black">
-      <main className="w-full max-w-6xl py-12 px-4 md:px-8 bg-white dark:bg-black shadow-xl">
-        <TalentListClient initialTalents={talents} />
+    <div className="flex min-h-screen justify-center bg-zinc-50 dark:bg-gray-900">
+      <main className="w-full max-w-7xl py-12 px-4 md:px-8">
+        <TalentListClient initialTalents={talents} isHomepage={true} />
       </main>
     </div>
   );

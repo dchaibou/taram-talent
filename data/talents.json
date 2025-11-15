@@ -5,28 +5,40 @@
     "nom": "Hama Kane",
     "domaine": "Entrepreneuriat Tech",
     "photoUrl": "/images/hama-kane.jpg",
-    "phraseAccroche": "Le Nigérien qui a transformé un échec en une application nationale.",
+    "phraseAccroche": "Le Nigérien qui a transformé l'échec d'un e-commerce en une application de micro-finance nationale, révolutionnant l'inclusion financière.",
     "parcours": [
       {
+        "annee": 2017,
+        "titre": "Formation et Idée Initiale",
+        "description": "Obtention d'un Master en Ingénierie Logicielle à Paris. Retour au pays avec l'ambition de lancer une grande plateforme de vente en ligne."
+      },
+      {
         "annee": 2018,
-        "titre": "Échec du premier projet",
-        "description": "Lancement d'une plateforme e-commerce qui a échoué. Leçon : la logistique est clé."
+        "titre": "Échec du Premier Projet (NiameyShop)",
+        "description": "Lancement de 'NiameyShop'. L'échec a été retentissant et coûteux, principalement en raison de l'absence d'infrastructures logistiques fiables et de la réticence culturelle à payer en ligne.\n\nCet échec a cependant révélé un besoin critique : la confiance et la facilité de transaction mobile."
       },
       {
         "annee": 2020,
-        "titre": "Lancement de NiyaTech",
-        "description": "Pivot et création d'une application de micro-finance réussie."
+        "titre": "Pivot Stratégique : Naissance de NiyaTech",
+        "description": "Utilisation des leçons apprises sur la confiance et le paiement mobile. NiyaTech est lancée, se concentrant sur la micro-finance et les transactions P2P sécurisées pour les marchés informels."
+      },
+      {
+        "annee": 2023,
+        "titre": "Expansion Régionale",
+        "description": "NiyaTech dépasse les 500 000 utilisateurs actifs et s'étend au Burkina Faso, validant le modèle d'affaires basé sur la confiance locale."
       }
     ],
     "accomplissements": [
-      "Fondateur de 'NiyaTech'",
-      "Prix de l'Innovation 2023"
+      "Fondateur et PDG de 'NiyaTech', valorisé à 5 millions USD.",
+      "Lauréat du Prix de l'Innovation Numérique Africaine (2023).",
+      "Création de plus de 150 emplois directs et indirects."
     ],
     "combats": [
-      "Difficulté à trouver des financements locaux",
-      "Stabilité internet"
+      "Difficulté à trouver des financements locaux pour un projet purement numérique sans garantie physique.",
+      "Instabilité et coût élevé des données internet dans les zones rurales.",
+      "Nécessité de former une main-d'œuvre locale spécialisée en Fintech."
     ],
-    "lecons": "Un grand échec est souvent juste un feedback coûteux."
+    "lecons": "L'échec de mon premier projet n'était pas une fin, mais un feedback coûteux. J'ai compris que l'innovation doit s'adapter à l'infrastructure existante, pas l'inverse. L'humilité face aux réalités du marché local est la clé de la résilience."
   },
   {
     "id": 2,
@@ -34,19 +46,318 @@
     "nom": "Aisha Moussa",
     "domaine": "Art et Culture",
     "photoUrl": "/images/aisha-moussa.jpg",
-    "phraseAccroche": "De l'ombre à la lumière : une voix qui célèbre la culture sahélienne.",
+    "phraseAccroche": "La voix qui a redéfini l'identité musicale sahélienne et captivé les scènes culturelles mondiales par son mélange de tradition et d'électro.",
     "parcours": [
       {
         "annee": 2015,
-        "titre": "Débuts difficiles",
-        "description": "Rejet par les maisons de production locales pour un style 'trop moderne'."
+        "titre": "Débuts difficiles et Rejet",
+        "description": "Rejet par les maisons de production locales pour un style jugé 'trop moderne' et 'trop expérimental' mélangeant les instruments traditionnels (Kountigui) avec le beat électro.\n\nCe rejet l'a forcée à adopter une approche de distribution indépendante via SoundCloud et YouTube."
+      },
+      {
+        "annee": 2018,
+        "titre": "Révélation Internationale",
+        "description": "Son titre 'Sahara Groove' devient viral en Europe. Elle signe un contrat avec un label indépendant allemand et commence à tourner sur la scène World Music."
       }
     ],
     "accomplissements": [
-      "Album 'Sahara Groove' certifié Or",
-      "Représentation du Niger à l'UNESCO"
+      "Album 'Sahara Groove' certifié Or en France.",
+      "Représentation officielle du Niger à l'UNESCO pour la Journée Mondiale de la Musique.",
+      "Fondatrice de l'ONG 'Voix du Sahel' pour la préservation des instruments anciens."
     ],
-    "combats": ["Préjugés sur l'art moderne dans la société"],
-    "lecons": "L'authenticité est la plus grande des révolutions."
+    "combats": [
+      "Préjugés sociaux et financiers sur l'art moderne au Niger.",
+      "Difficulté à transporter et assurer les instruments traditionnels lors des tournées internationales."
+    ],
+    "lecons": "L'authenticité est la plus grande des révolutions. Si le marché local n'est pas prêt pour votre vision, utilisez la mondialisation pour prouver sa valeur. Restez fidèle à vos racines, mais n'ayez pas peur de la fusion."
+  },
+  {
+    "id": 3,
+    "slug": "moussa-sani",
+    "nom": "Moussa Sani",
+    "domaine": "Agriculture & Agro-Tech",
+    "photoUrl": "/images/moussa-sani.jpg",
+    "phraseAccroche": "Un ingénieur agronome qui utilise l'IA pour optimiser les rendements du mil dans le Sahel, combattant la désertification par la donnée.",
+    "parcours": [
+      {
+        "annee": 2019,
+        "titre": "Fin des Études et Déception",
+        "description": "Diplômé de l'Université de Niamey. Refus de postes en bureau pour se concentrer sur les problématiques de terrain, perçu comme un 'gâchis' par son entourage."
+      },
+      {
+        "annee": 2021,
+        "titre": "Développement de l'Agri-App 'SahelPro'",
+        "description": "Lancement d'une application mobile qui utilise des images satellites et l'apprentissage automatique pour conseiller les agriculteurs sur l'irrigation et la rotation des cultures.\n\nPremiers tests dans la région de Tillabéri avec succès."
+      }
+    ],
+    "accomplissements": [
+      "Augmentation moyenne des rendements de mil de 30% chez ses utilisateurs pilotes.",
+      "Partenariat avec le Ministère de l'Agriculture pour un déploiement national.",
+      "Reconnu par la FAO pour son innovation en agriculture durable."
+    ],
+    "combats": [
+      "Convaincre les agriculteurs âgés d'adopter la technologie mobile.",
+      "Sécurité des données dans les zones éloignées.",
+      "Manque d'accès à l'électricité stable pour recharger les outils."
+    ],
+    "lecons": "La technologie n'est qu'un outil. Sa valeur réside dans la façon dont elle résout les problèmes quotidiens des gens. Écoutez le terrain avant d'écrire la première ligne de code. La patience est essentielle pour l'innovation dans l'agriculture."
+  },
+  {
+    "id": 4,
+    "slug": "fatima-ali",
+    "nom": "Fatima Ali",
+    "domaine": "Éducation & EdTech",
+    "photoUrl": "/images/fatima-ali.jpg",
+    "phraseAccroche": "Une pédagogue passionnée qui a créé une plateforme d'apprentissage en langues locales, brisant les barrières de l'alphabétisation grâce à la gamification.",
+    "parcours": [
+      {
+        "annee": 2016,
+        "titre": "Frustration du Système Traditionnel",
+        "description": "Professeur d'école. Constat de l'échec des méthodes d'apprentissage classiques dans les régions multilingues, menant à un fort taux d'abandon scolaire.\n\nDécision de démissionner pour se consacrer au numérique."
+      },
+      {
+        "annee": 2020,
+        "titre": "Lancement de 'Kalma' (Le Mot)",
+        "description": "Développement d'une application mobile d'alphabétisation et d'enseignement des mathématiques en Hausa, Zarma et Tamasheq. L'approche est basée sur des jeux éducatifs et la culture locale."
+      }
+    ],
+    "accomplissements": [
+      "Plus de 100 000 téléchargements au Niger et dans la diaspora.",
+      "Adoption de 'Kalma' par 50 écoles pilotes.",
+      "Bourse d'innovation de l'Union Africaine pour l'EdTech."
+    ],
+    "combats": [
+      "Résistance initiale de l'administration scolaire à l'intégration des outils numériques.",
+      "Besoins constants en financement pour la traduction et la création de contenu local de qualité."
+    ],
+    "lecons": "Ne cherchez pas à réformer l'institution de l'extérieur. Créez un outil si utile et si captivant que l'institution sera obligée de l'adopter. La meilleure technologie est celle qui se fond dans la culture."
+  },
+  {
+    "id": 5,
+    "slug": "issa-amadou",
+    "nom": "Issa Amadou",
+    "domaine": "Énergie Renouvelable",
+    "photoUrl": "/images/issa-amadou.jpg",
+    "phraseAccroche": "Artisan de la transition énergétique, il développe des solutions solaires modulaires et abordables pour les foyers non connectés du Sahel.",
+    "parcours": [
+      {
+        "annee": 2012,
+        "titre": "Départ de l'Exil et Retour",
+        "description": "Après 10 ans de travail dans l'énergie solaire en Espagne, il rentre au Niger avec la conviction que la technologie occidentale doit être 'tropicalisée' pour l'Afrique."
+      },
+      {
+        "annee": 2016,
+        "titre": "Création de 'Sahel Lumière'",
+        "description": "Lancement de son entreprise spécialisée dans les kits solaires 'pay-as-you-go' (paiement à l'usage), rendant l'énergie propre accessible aux familles à faible revenu.\n\nLe financement initial a été levé auprès de sa famille et de la diaspora."
+      }
+    ],
+    "accomplissements": [
+      "Fourniture d'électricité propre à plus de 10 000 foyers ruraux.",
+      "Certification internationale pour la durabilité et la qualité de ses kits.",
+      "Partenariat avec la Banque Mondiale pour l'expansion du projet."
+    ],
+    "combats": [
+      "Défis logistiques et de transport des équipements lourds à travers les vastes distances.",
+      "Lutte contre les contrefaçons de produits solaires bon marché et non durables."
+    ],
+    "lecons": "Le plus grand obstacle n'est pas la technologie, mais la finance. En adaptant le modèle économique (paiement fractionné) aux réalités du pouvoir d'achat local, on débloque un marché immense. La résilience est une question de modèle financier."
+  },
+  {
+    "id": 6,
+    "slug": "mariatou-boureima",
+    "nom": "Mariatou Boureima",
+    "domaine": "Santé & Bien-être",
+    "photoUrl": "/images/mariatou-boureima.jpg",
+    "phraseAccroche": "Infirmière devenue entrepreneure sociale, elle a créé la première clinique mobile pour la santé maternelle et infantile dans la région de Maradi.",
+    "parcours": [
+      {
+        "annee": 2013,
+        "titre": "Constat de la Crise Sanitaire",
+        "description": "Travail en hôpital rural. Témoin des taux élevés de mortalité infantile dus au manque d'accès aux soins préventifs dans les villages isolés."
+      },
+      {
+        "annee": 2017,
+        "titre": "Lancement de 'Mama Care Mobile'",
+        "description": "Avec un financement participatif (crowdfunding) international, elle achète et équipe sa première unité mobile. Le service se concentre sur la sensibilisation et les vaccins essentiels."
+      }
+    ],
+    "accomplissements": [
+      "Réduction de 20% des complications liées à l'accouchement dans sa zone d'intervention.",
+      "Récolte de 50 000 euros via une campagne de crowdfunding réussie.",
+      "Formation de 100 'Ambassadrices de Santé' locales."
+    ],
+    "combats": [
+      "Routes impraticables pendant la saison des pluies.",
+      "Superstitions et réticence culturelle à faire confiance à la médecine moderne.",
+      "Besoins constants en réapprovisionnement de vaccins et de médicaments."
+    ],
+    "lecons": "La santé ne vient pas à vous, vous devez l'amener aux gens. La persévérance contre les obstacles logistiques et culturels est le moteur de l'impact social. La foi en sa mission est le seul capital garanti."
+  },
+  {
+    "id": 7,
+    "slug": "sara-abdou",
+    "nom": "Sara Abdou",
+    "domaine": "Journalisme d'Investigation",
+    "photoUrl": "/images/sara-abdou.jpg",
+    "phraseAccroche": "Journaliste intrépide utilisant les données pour dénoncer la corruption et promouvoir la transparence dans la gestion des ressources publiques.",
+    "parcours": [
+      {
+        "annee": 2010,
+        "titre": "Début de Carrière et Menaces",
+        "description": "Premiers reportages critiques sur la gestion minière, entraînant des menaces personnelles et des pressions politiques. Elle choisit de se spécialiser dans le journalisme basé sur les données (Data Journalism)."
+      },
+      {
+        "annee": 2017,
+        "titre": "Création du 'Data Desk'",
+        "description": "Lancement d'une plateforme indépendante de visualisation de données publiques, formant de jeunes journalistes à l'analyse critique des budgets et des contrats."
+      }
+    ],
+    "accomplissements": [
+      "Révélation d'un scandale de détournement de fonds qui a conduit à des réformes judiciaires.",
+      "Bourse pour la Transparence de la Fondation Open Society.",
+      "Son travail est cité par Amnesty International pour la liberté de la presse."
+    ],
+    "combats": [
+      "Manque d'accès aux documents publics et opacité administrative.",
+      "Sécurité personnelle constante due à la nature de ses enquêtes."
+    ],
+    "lecons": "Dans un environnement où l'information est censurée, la donnée est votre seule arme. Il ne suffit pas de dénoncer, il faut prouver, visualiser et rendre l'information complexe accessible au citoyen moyen."
+  },
+  {
+    "id": 8,
+    "slug": "omar-daouda",
+    "nom": "Omar Daouda",
+    "domaine": "Sport et Jeunesse",
+    "photoUrl": "/images/omar-daouda.jpg",
+    "phraseAccroche": "Ancien athlète olympique, il a fondé une académie qui utilise le football comme vecteur d'éducation et de développement social dans les quartiers défavorisés.",
+    "parcours": [
+      {
+        "annee": 2008,
+        "titre": "Retour des Jeux Olympiques",
+        "description": "Revient des Jeux sans médaille, mais avec une mission : utiliser le prestige du sport pour structurer l'éducation de la jeunesse à Niamey."
+      },
+      {
+        "annee": 2014,
+        "titre": "Lancement de l'Académie 'Espoir'",
+        "description": "Création d'une académie de football qui impose des cours de soutien scolaire obligatoires pour tous les participants. Le financement repose sur des partenariats locaux et la vente de produits dérivés."
+      }
+    ],
+    "accomplissements": [
+      "Plus de 500 jeunes formés, avec un taux de réussite scolaire de 90%.",
+      "Deux anciens élèves ont obtenu des bourses sportives aux États-Unis.",
+      "Partenariat avec l'UNICEF pour des programmes de sensibilisation à la santé."
+    ],
+    "combats": [
+      "Pression des clubs professionnels qui tentent de recruter les jeunes talents sans se soucier de leur éducation.",
+      "Accès aux terrains d'entraînement et aux équipements de qualité."
+    ],
+    "lecons": "Le talent sportif est éphémère, mais le caractère est permanent. L'éducation n'est pas secondaire au sport, elle en est la fondation. Si vous donnez aux jeunes l'espoir et la structure, ils peuvent tout accomplir."
+  },
+  {
+    "id": 9,
+    "slug": "amina-boubacar",
+    "nom": "Amina Boubacar",
+    "domaine": "Environnement & Eau",
+    "photoUrl": "/images/amina-boubacar.jpg",
+    "phraseAccroche": "Hydrologue pionnière qui a développé des systèmes de micro-irrigation à faible coût, transformant des terres arides en oasis de résilience alimentaire.",
+    "parcours": [
+      {
+        "annee": 2011,
+        "titre": "Formation et Inspiration du Terrain",
+        "description": "Diplômée en Hydrologie de l'Université de Zinder. Refus d'un poste confortable en ville pour travailler avec les communautés rurales confrontées à la pénurie d'eau.\n\nCe travail l'a menée à réaliser des cartographies détaillées des nappes phréatiques oubliées."
+      },
+      {
+        "annee": 2018,
+        "titre": "Développement des 'Jardins Goutte-à-Goutte'",
+        "description": "Lancement d'un projet pilote utilisant des techniques d'irrigation au goutte-à-goutte adaptées aux matériaux locaux et nécessitant un minimum d'électricité.\n\nLes premiers résultats ont montré une réduction de 70% de la consommation d'eau par rapport aux méthodes traditionnelles."
+      },
+      {
+        "annee": 2022,
+        "titre": "Reconnaissance Internationale",
+        "description": "Prix de l'Innovation pour l'Eau de la Banque Africaine de Développement (BAD). Elle utilise cette dotation pour former 500 femmes entrepreneures à la gestion de l'eau."
+      }
+    ],
+    "accomplissements": [
+      "Mise en place de 200 systèmes d'irrigation communautaires actifs.",
+      "Augmentation de la production maraîchère de 45% dans les zones d'intervention.",
+      "Consultante auprès de l'Organisation des Nations Unies (ONU) pour les projets de résilience climatique."
+    ],
+    "combats": [
+      "Scepticisme initial des leaders communautaires masculins face à une femme cheffe de projet technique.",
+      "Difficulté à sécuriser l'accès aux terres pour les femmes qui souhaitent utiliser les systèmes d'irrigation.",
+      "Périodes de sécheresse extrêmes mettant à rude épreuve les prototypes."
+    ],
+    "lecons": "L'eau est la monnaie la plus précieuse du Sahel. La technologie doit être un amplificateur de l'ingéniosité locale, et non un remplacement. L'impact réel se mesure en litres d'eau économisés et en nombre de familles nourries."
+  },
+  {
+    "id": 10,
+    "slug": "ibrahim-guindo",
+    "nom": "Ibrahim Guindo",
+    "domaine": "Gouvernance & Réformes Publiques",
+    "photoUrl": "/images/ibrahim-guindo.jpg",
+    "phraseAccroche": "Ancien haut fonctionnaire, il a mené une réforme audacieuse de la fonction publique, utilisant la transparence et la technologie pour lutter contre la bureaucratie et l'inefficacité.",
+    "parcours": [
+      {
+        "annee": 2005,
+        "titre": "Service Public et Frustration Interne",
+        "description": "Début de carrière au Ministère des Finances. Frustration face à la lourdeur administrative et aux processus obsolètes qui freinent les projets de développement."
+      },
+      {
+        "annee": 2015,
+        "titre": "Lancement du Projet 'E-Gouvernance'",
+        "description": "Nommé à la tête d'une cellule de réforme. Son échec initial a été de tenter une refonte complète; il a pivoté vers l'informatisation progressive des services les plus demandés (état civil, permis).\n\nCeci a été un succès grâce à l'adoption progressive."
+      },
+      {
+        "annee": 2021,
+        "titre": "Formalisation de la Réforme",
+        "description": "Mise en place d'un portail unique de services publics en ligne, réduisant le temps d'attente pour les documents administratifs de 75% et augmentant la collecte de taxes locales."
+      }
+    ],
+    "accomplissements": [
+      "Réduction du temps de traitement des dossiers d'importation de 50%.",
+      "Augmentation de 15% des recettes fiscales numérisées.",
+      "Consultant invité par l'E-Government Academy (Estonie) pour partager l'expérience nigérienne."
+    ],
+    "combats": [
+      "Résistance passive et active de la bureaucratie établie qui voyait la numérisation comme une menace.",
+      "Difficulté à maintenir la sécurité des systèmes contre les cyberattaques.",
+      "Nécessité de former une génération entière de fonctionnaires aux nouveaux outils."
+    ],
+    "lecons": "La réforme gouvernementale n'est pas un sprint, c'est un marathon politique et technologique. Pour vaincre la bureaucratie, il faut la contourner en offrant une solution plus rapide et plus transparente que l'ancien système. L'impact est le meilleur argument."
+  },
+  {
+    "id": 11,
+    "slug": "djibril-chaibou",
+    "nom": "Djibril CHAIBOU M. MADO",
+    "domaine": "Data Science & IA",
+    "photoUrl": "/images/djibril-chaibou.jpg",
+    "phraseAccroche": "L'ingénieur nigérien qui a développé une intelligence artificielle capable de prédire avec précision les risques de famine et les mouvements de population dans le Sahel, révolutionnant l'aide humanitaire.",
+    "parcours": [
+      {
+        "annee": 2015,
+        "titre": "Formation Pointue et Scepticisme Initial",
+        "description": "Obtention d'un Master en Data Science et Machine Learning à Montréal. Son projet de thèse sur l'application de l'IA aux problèmes socio-économiques du Sahel fut initialement accueilli avec scepticisme, jugé 'trop ambitieux' ou 'trop complexe pour le terrain'.\n\nMalgré ce manque de soutien académique initial, la détermination de prouver la faisabilité de l'approche est devenue son moteur."
+      },
+      {
+        "annee": 2018,
+        "titre": "Création du 'Sahel Analytics Lab'",
+        "description": "Retour au Niger et fondation du 'Sahel Analytics Lab' (SAL). La première année fut un combat pour réunir et structurer les données disparates (météo, prix des denrées, conflits locaux, santé) nécessaires à l'entraînement de ses modèles. Le manque d'infrastructures de cloud computing a nécessité des solutions locales et ingénieuses."
+      },
+      {
+        "annee": 2022,
+        "titre": "Validation du Modèle Prédictif 'Gari'",
+        "description": "Son modèle, surnommé 'Gari' (le grain), réussit à prédire les crises alimentaires avec une précision de 85% six mois à l'avance. Cette performance a permis à plusieurs ONG et agences gouvernementales de pré-positionner des aides, sauvant des milliers de vies.\n\nCe succès marque un pivot vers la reconnaissance internationale de l'expertise nigérienne en matière d'IA appliquée."
+      }
+    ],
+    "accomplissements": [
+      "Fondateur et Directeur du 'Sahel Analytics Lab', première startup nigérienne de Data Science.",
+      "Son modèle 'Gari' est intégré aux systèmes d'alerte précoce de l'ONU et de la CEDEAO.",
+      "A formé plus de 50 analystes de données locaux pour le secteur public et privé."
+    ],
+    "combats": [
+      "Le 'data desert' : extrême difficulté à obtenir des données structurées, fiables et historiques.",
+      "Le coût prohibitif de l'infrastructure de calcul (serveurs et cloud computing) nécessaire à l'exécution de modèles complexes.",
+      "Convaincre les organismes traditionnels de l'aide humanitaire de faire confiance à un algorithme local."
+    ],
+    "lecons": "L'innovation la plus puissante ne vient pas de la complexité technologique, mais de la simplicité de l'impact qu'elle crée. Le plus grand défi de l'Afrique n'est pas le manque de talents, mais le manque de foi dans les solutions locales. Utilisez la rareté des ressources comme un catalyseur pour l'ingéniosité."
   }
 ]

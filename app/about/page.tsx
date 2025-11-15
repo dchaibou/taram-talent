@@ -1,9 +1,9 @@
-// app/about/page.tsx
+// app/about/page.tsx (Version Corrigée et Améliorée)
+
 import { Metadata } from "next";
-import React from "react";
 
 export const metadata: Metadata = {
-  title: "Notre Mission",
+  title: "Notre Mission | GENIE NIGER",
   description:
     "Découvrez la vision derrière GENIE NIGER : valoriser les talents nigériens, raconter les histoires complètes et inspirer la prochaine génération.",
 };
@@ -12,38 +12,86 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto p-4 md:p-12 max-w-6xl">
       {/* Bannière de Mission */}
-      <div className="bg-linear-to-r from-orange-600 to-red-600 text-white p-10 md:p-16 rounded-3xl shadow-2xl mb-16 text-center">
+      {/* <div className="bg-linear-to-r from-orange-600 to-red-600 text-white p-10 md:p-16 rounded-3xl shadow-2xl mb-16 text-center">
         <h1 className="text-5xl md:text-6xl font-black mb-4">
-          Notre Mission : Révéler le Génie Nigérien 🇳🇪
+          Notre Mission : Documenter le Génie Nigérien 🇳🇪
         </h1>
         <p className="text-xl font-light opacity-90">
-          Chaque combat est une victoire en devenir. Nous racontons les
-          histoires complètes.
+          Nous sommes la plateforme qui{" "}
+          <b>systématise le récit de la résilience</b> en Afrique de
+          l&apos;Ouest.
+        </p>
+      </div> */}
+      {/* Bannière de Mission (Optimisée pour Mobile) */}
+      <div
+        // CORRECTION CLASSE TAILWIND + PADDING AJUSTÉ
+        className="bg-linear-to-r from-orange-600 to-red-600 text-white 
+                   p-8 sm:p-10 md:p-16 rounded-3xl shadow-2xl mb-16 text-center"
+      >
+        <h1
+          // TAILLE AJUSTÉE POUR MOBILE
+          className="text-4xl sm:text-5xl md:text-6xl font-black mb-3 md:mb-4"
+        >
+          Notre Mission : Documenter le Génie Nigérien 🇳🇪
+        </h1>
+        <p
+          // TAILLE AJUSTÉE POUR MOBILE
+          className="text-lg sm:text-xl font-light opacity-90 mt-2"
+        >
+          Nous sommes la plateforme qui{" "}
+          <b>systématise le récit de la résilience</b> en Afrique de
+          l&apos;Ouest.
         </p>
       </div>
 
       <section className="grid lg:grid-cols-3 gap-12">
         {/* Valeur 1 : L'Authenticité */}
         <Card
-          icon="📚"
-          title="Raconter la Réalité"
-          description="Nous allons au-delà des succès apparents. Nous documentons les obstacles, les échecs cruciaux, et la résilience nécessaire pour triompher au Niger."
+          icon="✅" // Icône plus percutante pour la vérité
+          title="Récits Authentiques et Complets"
+          description={
+            <>
+              Notre démarche va au-delà des honneurs. Nous publions les études
+              de cas détaillées incluant les{" "}
+              <b>
+                obstacles structurels, les pivots stratégiques, et les échecs
+                cruciaux
+              </b>{" "}
+              qui ont mené au succès.
+            </>
+          }
           color="border-green-600"
         />
 
         {/* Valeur 2 : L'Inspiration */}
         <Card
-          icon="✨"
-          title="Inspirer la Jeunesse"
-          description="En montrant que les héros d'aujourd'hui ont aussi trébuché, nous donnons à la jeunesse nigérienne les modèles réels pour transformer leurs propres défis en opportunités."
+          icon="🚀" // Icône plus dynamique
+          title="Modèles pour la Prochaine Génération"
+          description={
+            <>
+              En présentant le parcours honnête, nous fournissons à la jeunesse
+              nigérienne des figures réelles pour transformer leurs propres
+              défis locaux en <b>leviers d&apos;opportunité</b> et
+              d&apos;innovation.
+            </>
+          }
           color="border-orange-600"
         />
 
         {/* Valeur 3 : La Valorisation */}
         <Card
-          icon="🌍"
-          title="Rayonnement Mondial"
-          description="Positionner les talents nigériens sur la scène internationale, attirant l'attention des partenaires, investisseurs et de la diaspora."
+          icon="📈" // Icône de croissance
+          title="Rayonnement International et Investissement"
+          description={
+            <>
+              Positionner les entrepreneurs, artistes et innovateurs nigériens
+              sur la scène mondiale, facilitant la{" "}
+              <b>
+                connexion avec la diaspora, les partenaires et les investisseurs
+              </b>{" "}
+              internationaux.
+            </>
+          }
           color="border-blue-600"
         />
       </section>
@@ -51,20 +99,21 @@ export default function AboutPage() {
       {/* Section Impact */}
       <section className="mt-20 p-10 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border-t-4 border-green-600">
         <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-6">
-          Notre Engagement
+          Notre Engagement Éditorial
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-          GENIE NIGER est une initiative citoyenne, portée par la conviction que
-          la documentation de l&apos;excellence est la clé du progrès national.
-          Nous nous engageons à maintenir une plateforme inclusive, neutre et
-          rigoureuse.
+          GENIE NIGER est une initiative citoyenne et éditoriale, portée par la
+          conviction que la <b>documentation de l&apos;excellence</b> est la clé
+          du progrès national. Nous nous engageons à maintenir une plateforme
+          inclusive, neutre et rigoureuse, en vérifiant chaque histoire pour sa
+          <b>pertinence et son intégrité</b>.
         </p>
       </section>
     </div>
   );
 }
 
-// Composant Carte de Valeur réutilisable
+// Composant Carte de Valeur réutilisable (inchangé)
 const Card = ({
   icon,
   title,
@@ -73,7 +122,7 @@ const Card = ({
 }: {
   icon: string;
   title: string;
-  description: string;
+  description: React.ReactNode;
   color: string;
 }) => (
   <div

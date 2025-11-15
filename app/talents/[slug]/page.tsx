@@ -1,16 +1,25 @@
-// app/talents/[slug]/page.tsx
+// app/talents/[slug]/page.tsx (Optimisation Long-Form Content)
 
 import { Metadata } from "next";
 import { Talent, ParcoursEtape } from "@/types/Talent";
 import Image from "next/image";
 import { getTalentBySlug, getAllTalents } from "@/lib/data";
+import React from "react"; // Nécessaire pour React.Fragment/Key
 
-// Type pour les paramètres de la route
-// interface TalentPageProps {
-//   params: {
-//     slug: string;
-//   };
-// }
+// --- FONCTION UTILITAIRE POUR GÉRER LES PARAGRAPHES ---
+// Transforme les chaînes de texte contenant des sauts de ligne (\n\n) en éléments <p>
+const renderParagraphs = (text: string) => {
+  // Divise le texte par deux sauts de ligne (standard pour un nouveau paragraphe)
+  return text.split("\n\n").map((paragraph, index) => (
+    // Utilisez key pour React. C'est sécurisé car le contenu est pré-rendu (Server Component)
+    <p
+      key={index}
+      className="mb-4 leading-relaxed text-gray-700 dark:text-gray-400"
+    >
+      {paragraph}
+    </p>
+  ));
+};
 
 export async function generateMetadata({
   params,
@@ -28,14 +37,11 @@ export async function generateMetadata({
   };
 }
 
-// --- 2. Génération des Pages Statiques (Paramètres) ---
 export async function generateStaticParams() {
-  // Utilisation de la fonction asynchrone pour la résolution des chemins
   const talents: Talent[] = await getAllTalents();
   return talents.map((talent) => ({ slug: talent.slug }));
 }
 
-// --- 3. Composant Principal (Server Component) ---
 export default async function TalentPage({
   params,
 }: {
@@ -50,7 +56,7 @@ export default async function TalentPage({
 
   return (
     <div className="container mx-auto p-4 md:p-12 max-w-6xl">
-      {/* Bannière de Tête Pro */}
+      {/* Bannière de Tête Pro (Inchagée) */}
       <header className="text-center mb-16 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-3xl border-b-8 border-orange-500">
         <Image
           src={talent.photoUrl}
@@ -68,7 +74,7 @@ export default async function TalentPage({
         </p>
       </header>
 
-      {/* Citation Inspirante */}
+      {/* Citation Inspirante (Inchagée) */}
       <section className="mb-16">
         <blockquote className="text-3xl font-light text-center text-gray-700 dark:text-gray-300 p-8 bg-green-50 dark:bg-green-950 border-l-8 border-green-600 rounded-lg italic shadow-lg">
           &quot;{talent.phraseAccroche}&quot;
@@ -80,7 +86,7 @@ export default async function TalentPage({
         {/* Colonne 1: Le Parcours & Les Combats */}
         <div className="lg:col-span-2 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl">
           <h2 className="text-4xl font-extrabold text-red-600 mb-8 border-b-4 border-red-200 pb-3">
-            🥊 Le Parcours et les Combats Menés
+            ⚔️ Chronologie : Défis, Pivots et Moments Clés
           </h2>
 
           <ul className="space-y-10">
@@ -93,22 +99,24 @@ export default async function TalentPage({
                 <h3 className="text-2xl font-bold text-red-700 dark:text-red-400">
                   {etape.titre}
                 </h3>
-                <p className="text-gray-700 dark:text-gray-400 mt-1 text-lg leading-relaxed">
-                  {etape.description}
-                </p>
+                {/* APPLICATION DE renderParagraphs pour la DESCRIPTION LONGUE */}
+                <div className="mt-1 text-lg">
+                  {renderParagraphs(etape.description)}
+                </div>
               </li>
             ))}
           </ul>
 
           <h3 className="text-3xl font-bold text-orange-600 mt-12 mb-4">
-            🔥 Les Leçons Cruciales (Échec Transformé)
+            💡 Stratégie de Résilience : L&apos;Échec comme Levain
           </h3>
-          <p className="italic text-xl text-gray-700 dark:text-gray-300 p-6 bg-orange-50 dark:bg-orange-950 rounded-lg border-l-4 border-orange-500">
-            &quot;{talent.lecons}&quot;
-          </p>
+          <div className="italic text-xl text-gray-700 dark:text-gray-300 p-6 bg-orange-50 dark:bg-orange-950 rounded-lg border-l-4 border-orange-500">
+            {/* APPLICATION DE renderParagraphs pour la LEÇON LONGUE */}
+            {renderParagraphs(talent.lecons)}
+          </div>
         </div>
 
-        {/* Colonne 2: Accomplissements et Stats */}
+        {/* Colonne 2: Accomplissements et Stats (Inchangée) */}
         <aside className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl border-l-4 border-green-600">
           <h2 className="text-3xl font-extrabold text-blue-700 dark:text-blue-400 mb-6">
             🏆 Accomplissements Majeurs

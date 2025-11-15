@@ -1,9 +1,16 @@
-// app/soumettre/SubmitFormClient.tsx
 "use client";
 import React, { useState } from "react";
 
+interface FormData {
+  nomTalent: string;
+  domaine: string;
+  votreNom: string;
+  contact: string;
+  justification: string;
+}
+
 const SubmitFormClient: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     nomTalent: "",
     domaine: "",
     votreNom: "",
@@ -12,6 +19,7 @@ const SubmitFormClient: React.FC = () => {
   });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [isError, setIsError] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -25,23 +33,59 @@ const SubmitFormClient: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     setMessage("");
+    setIsError(false);
 
-    // --- Simulation d'envoi de données ---
-    // En production, vous feriez ici un appel fetch vers un backend (API Route, Formspree, etc.)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    // ------------------------------------
+    try {
+      // Validation simple de l'email
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.contact)) {
+        setIsError(true);
+        setMessage(
+          "Veuillez entrer une adresse e-mail valide pour le contact."
+        );
+        setLoading(false);
+        return;
+      }
 
-    setLoading(false);
-    setMessage(
-      "✅ Merci ! Votre proposition a été envoyée avec succès et sera examinée par notre équipe."
-    );
-    setFormData({
-      nomTalent: "",
-      domaine: "",
-      votreNom: "",
-      contact: "",
-      justification: "",
-    });
+      // Appel à la route API Next.js qui utilise Nodemailer
+      const response = await fetch("/api/soumission", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setMessage(`✅ ${result.message}`);
+        // Réinitialisation du formulaire après succès
+        setFormData({
+          nomTalent: "",
+          domaine: "",
+          votreNom: "",
+          contact: "",
+          justification: "",
+        });
+      } else {
+        // Gérer les erreurs de l'API (400, 500, etc.)
+        setIsError(true);
+        setMessage(
+          `❌ Erreur: ${
+            result.message ||
+            "Échec de l'envoi de la proposition. Vérifiez les champs."
+          }`
+        );
+      }
+    } catch (error) {
+      setIsError(true);
+      setMessage(
+        "❌ Une erreur réseau est survenue. Vérifiez votre connexion."
+      );
+      console.error("Erreur réseau:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -57,8 +101,13 @@ const SubmitFormClient: React.FC = () => {
         lumière ?
       </p>
 
+      {/* Affichage des messages (succès ou erreur) */}
       {message && (
-        <div className="p-4 mb-4 text-green-700 bg-green-100 rounded-lg">
+        <div
+          className={`p-4 mb-4 rounded-lg font-semibold ${
+            isError ? "text-red-700 bg-red-100" : "text-green-700 bg-green-100"
+          }`}
+        >
           {message}
         </div>
       )}
@@ -88,9 +137,10 @@ const SubmitFormClient: React.FC = () => {
         />
         <InputField
           name="contact"
-          label="Votre Contact (Email ou Téléphone)"
+          label="Votre Contact Email"
           value={formData.contact}
           onChange={handleChange}
+          type="email"
           required
         />
 
@@ -112,13 +162,39 @@ const SubmitFormClient: React.FC = () => {
       <button
         type="submit"
         disabled={loading}
-        className={`mt-8 w-full px-4 py-3 rounded-full text-white font-bold transition-all duration-300 shadow-md ${
+        className={`mt-8 w-full px-4 py-3 rounded-full text-white font-bold transition-all duration-300 shadow-lg flex items-center justify-center space-x-2 ${
           loading
             ? "bg-gray-400 cursor-not-allowed"
             : "bg-green-600 hover:bg-green-700 transform hover:scale-[1.01]"
         }`}
       >
-        {loading ? "Envoi en cours..." : "Envoyer la Proposition"}
+        {loading ? (
+          <>
+            <svg
+              className="animate-spin h-5 w-5 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              ></path>
+            </svg>
+            <span>Envoi en cours...</span>
+          </>
+        ) : (
+          <span>Envoyer la Proposition</span>
+        )}
       </button>
     </form>
   );
@@ -131,19 +207,21 @@ const InputField = ({
   value,
   onChange,
   required,
+  type = "text",
 }: {
   name: string;
   label: string;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   required: boolean;
+  type?: string;
 }) => (
   <label className="block">
     <span className="text-gray-700 dark:text-gray-300 font-medium">
       {label}*
     </span>
     <input
-      type="text"
+      type={type}
       name={name}
       value={value}
       onChange={onChange}
